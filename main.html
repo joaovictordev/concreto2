@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="./css/pure-min.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <div class="app">
+    <img id="logo" src="./img/ufersa_logo.jpg" alt="">
+    <div class="data-section">
+      <h1 class="title">Dados Iniciais</h1>
+      <form id="initial-data" class="pure-form pure-form-stacked pure-g">
+          <div class="pure-u-1-2">
+            <label for="tipo-aco">Tipo do aço</label>
+            <select id="tipo-aco" class="pure-input-1">
+              <option value="ca50">CA-50</option>
+            </select>
+          </div>
+          <div class="pure-u-1-2">
+            <label for="fck">Fck (KN/cm²)</label>
+            <input id="fck" class="pure-input-1" type="text">
+          </div>
+          <div class="pure-u-1-3">
+            <label for="le">Le do pilar (cm)</label>
+            <input id="le" class="pure-input-1" type="text">
+          </div>
+          <div class="pure-u-1-3">
+            <label for="hx">hx do pilar (cm)</label>
+            <input id="hx" class="pure-input-1" type="text">
+          </div>
+          <div class="pure-u-1-3">
+            <label for="hy">hy do pilar (cm)</label>
+            <input id="hy" class="pure-input-1" type="text">
+          </div>
+          <div class="pure-u-1-4">
+            <label for="momento-inicial-ax">Md inicial em Ax (KN.cm)</label>
+            <input id="momento-inicial-ax" class="pure-input-1" type="text">
+          </div>
+          <div class="pure-u-1-4">
+            <label for="momento-inicial-bx">Md inicial em Bx (KN.cm)</label>
+            <input id="momento-inicial-bx" class="pure-input-1" type="text">
+          </div>
+          <div class="pure-u-1-4">
+            <label for="momento-inicial-ay">Md inicial em Ay (KN.cm)</label>
+            <input id="momento-inicial-ay" class="pure-input-1" type="text">
+          </div>
+          <div class="pure-u-1-4">
+            <label for="momento-inicial-by">Md inicial em By (KN.cm)</label>
+            <input id="momento-inicial-by" class="pure-input-1" type="text">
+          </div>
+          <div class="pure-u-1-2">
+            <label for="nk">Nk (KN)</label>
+            <input id="nk" class="pure-input-1" type="text">
+          </div>
+          <div class="pure-u-1-2">
+            <label for="yn">&#x3B3n</label>
+            <input id="yn" class="pure-input-1" type="text">
+          </div>
+          <div class="pure-u-1">
+            <button type="submit" class="pure-button pure-input-1 pure-button-primary btn-submit">Calcular valores</button>
+          </div>
+      </form>
+    </div>
+
+    <div id="parametros"></div>
+
+    <div class="data-section">
+      <h1 class="title">Área de aço</h1>
+      <form id="area-aco" class="pure-form pure-form-stacked pure-g">
+          <div class="pure-u-1-4">
+            <label for="omega">&#x3C9</label>
+            <input id="omega" class="pure-input-1" type="text">
+          </div>
+          <div class="pure-u-1-4">
+            <label for="hx2">hx (cm)</label>
+            <input id="hx2" class="pure-input-1" type="text">
+          </div>
+          <div class="pure-u-1-4">
+            <label for="hy2">hy (cm)</label>
+            <input id="hy2" class="pure-input-1" type="text">
+          </div>
+          <div class="pure-u-1-4">
+            <label for="fck2">fck (KN/cm²)</label>
+            <input id="fck2" class="pure-input-1" type="text">
+          </div>
+          <div class="pure-u-1">
+            <button type="submit" class="pure-button pure-input-1 pure-button-primary btn-submit">Calcular Área</button>
+          </div>
+      </form>
+    </div>
+
+    <div id="resultados"></div>
+  </div>
+
+  <script src="./calculo.js"></script>
+</body>
+</html>
